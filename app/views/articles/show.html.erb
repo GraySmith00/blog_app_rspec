@@ -48,6 +48,8 @@
       </div>
     <% end %>
     
+    <hr>
+    
     <div class="form-group">
       <div class="control-label col-md-2">
         <%= f.label :body, 'New Comment' %>
@@ -75,9 +77,9 @@
     <% if @article.comments.any? %>
       <% @article.comments.persisted.each do |comment| %>
         <div class="comment-body">
-        <%= comment.body %>! </div>
+        <%= comment.body %> </div>
         <div class="comment-time">
-        <%= time_ago_in_words(comment.created_at) %>! ago by <%= comment.user.email %>
+        <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.email %>
         </div>
         <hr>
       <% end %>
