@@ -15,6 +15,6 @@ RSpec.feature "Users sign-in" do
     
     expect(page).to have_content("Signed in successfully.")
     expect(page).to have_content("Signed in as #{@john.email}")
-# ex    expect(current_path).to eq(articles_path)
+    #expect(current_path).to eq(articles_path)
   end
 end
